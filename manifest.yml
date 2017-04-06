@@ -1,0 +1,8 @@
+applications:
+- path: .
+  memory: 256M
+  instances: 1
+  domain: mybluemix.net
+  name: daknodejs55
+  host: daknodejs55
+  disk_quota: 1024M
