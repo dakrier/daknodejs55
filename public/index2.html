@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="/resources/demos/style.css">
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src='https://unpkg.com/@watson-virtual-agent/chat-widget@1.5.1/dist/chat.min.js'></script>
   <script>
   $( function() {
     $( "#dialog" ).dialog({
@@ -26,12 +27,23 @@
       $( "#dialog" ).dialog( "open" );
     });
   } );
+ 
+  
+  IBMChat.init({
+    el: 'ibm_chat_root',
+    baseURL: 'https://api.ibm.com/virtualagent/run/api/v1',
+    botID: '5d9ab453-ee8e-4185-8dc6-63641efdc8cc',
+    XIBMClientID: '79af493b-dce5-4b27-80d9-46ce0ee63c45',
+    XIBMClientSecret: 'Y8qE1sT1vJ8iN2jY5hL3xO4aD1qH3qY8oX2uL1gU1eV5tK4uT8'
+  });
+  
   </script>
+  
 </head>
 <body>
  
 <div id="dialog" title="Basic dialog">
-  <p>This is an animated dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+   <div id="ibm_chat_root"></div>
 </div>
  
 <button id="opener">Open Dialog</button>
