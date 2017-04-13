@@ -3,11 +3,42 @@
 <head>
   <!-- Scripts
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src='https://unpkg.com/@watson-virtual-agent/chat-widget@1.5.1/dist/chat.min.js'></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
   <script>
+  
+    $( function() {
+    $( "#dialog" ).dialog({
+      autoOpen: false,
+      show: {
+        effect: "blind",
+        duration: 1000
+      },
+      hide: {
+        effect: "explode",
+        duration: 1000
+      }
+    });
+ 
+    $( "#opener" ).on( "click", function() {
+      $( "#dialog" ).dialog( "open" );
+    });
+  } );
   
   function alertme() {
   	alert("HI");
   }
+  
+  IBMChat.init({
+    el: 'ibm_chat_root',
+    baseURL: 'https://api.ibm.com/virtualagent/run/api/v1',
+    botID: '5d9ab453-ee8e-4185-8dc6-63641efdc8cc',
+    XIBMClientID: 'YOUR_IBM_CLIENT_ID',
+    XIBMClientSecret: 'YOUR_IBM_CLIENT_SECRET'
+  });
+  
   </script>
 
   <!-- Basic Page Needs
@@ -27,8 +58,9 @@
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="stylsheets/normalize.css">
+  <link rel="stylesheet" href="stylsheets/skeleton.css">
+  <link rel="stylesheet" href="styleheets/jquery-ui.css">
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -46,7 +78,7 @@
   		<!--<area shape="rect" coords="0,0,1351,346" href="#"> -->
   		<area shape="rect" coords="0,347,1352,687" onclick="alertme()">
   	</map> 
- 
+ 		<div id="ibm_chat_root"></div>
   </div>
 
 <!-- End Document
