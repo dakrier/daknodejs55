@@ -4,6 +4,9 @@
 // node.js starter application for Bluemix
 //------------------------------------------------------------------------------
 
+var handlebars = require('handlebars');
+var fs = require('fs');
+
 // This application uses express as its web server
 // for more info, see: http://expressjs.com
 var express = require('express');
@@ -26,6 +29,29 @@ app.listen(appEnv.port, '0.0.0.0', function() {
   // print a message when the server starts listening
   console.log("server starting on " + appEnv.url);
 });
-app.get('/dave', function (req, res) {
-  res.send('Hello World!');
+app.get('/how', function (req, res) {
+  //res.send('Hello World!');
+
+	// get your data into a variable
+	var fooJson = require('/doc.json');
+
+	// read the file and use the callback to render
+	fs.readFile('/how.html', function(err, data){
+  	if (!err) {
+    	// make the buffer into a string
+    	var source = data.toString();
+    	// call the render function
+    	res.send(renderToString(source, fooJson));
+  	} else {
+    	// handle file read error
+  	}
+});
+
+// this will be called after the file is read
+function renderToString(source, data) {
+  var template = handlebars.compile(source);
+  var outputString = template(data);
+  return outputString;
+}
+  
 })
