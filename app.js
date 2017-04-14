@@ -33,7 +33,7 @@ app.get('/how', function (req, res) {
   //res.send('Hello World!');
 
 	// get your data into a variable
-	var fooJson = require('doc.json');
+	var fooJson = require('data.json');
 
 	// read the file and use the callback to render
 	fs.readFile('how.html', function(err, data){
