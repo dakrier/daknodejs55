@@ -96,8 +96,13 @@
       <div class="one-half column" style="margin-top: 5%">
         <h4>{{title}}</h4>
         
+        {{#each links}}
+        <a class="button button-primary" href="{{{link}}}">{{name}}</a>
+        <!--
         <a class="button" href="https://www.ibm.com/us-en/marketplace/cognitive-customer-engagement">Watson Virtual Agent</a>
         <a class="button button-primary" href="www.bluemix.net">Bluemix</a>
+        -->
+        {{/each}}
         </div>
     </div>
   </div>

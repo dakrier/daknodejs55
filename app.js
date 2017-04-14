@@ -33,25 +33,26 @@ app.get('/how', function (req, res) {
   //res.send('Hello World!');
 
 	// get your data into a variable
-	var fooJson = require('./public/data.json');
+	var fooJson = require('./data.json');
 
 	// read the file and use the callback to render
 	fs.readFile('./public/how.html', function(err, data){
-  	if (!err) {
-    	// make the buffer into a string
-    	var source = data.toString();
-    	// call the render function
-    	res.send(renderToString(source, fooJson));
-  	} else {
-    	// handle file read error
-  	}
-});
-
+  		if (!err) {
+    		// make the buffer into a string
+   	 		var source = data.toString();
+    		// call the render function
+    		res.send(renderToString(source, fooJson));
+  		} else {
+    		// handle file read error
+	  	}
+	});
+})
+	
 // this will be called after the file is read
 function renderToString(source, data) {
-  var template = handlebars.compile(source);
-  var outputString = template(data);
-  return outputString;
+	var template = handlebars.compile(source);
+  	var outputString = template(data);
+  	return outputString;
 }
   
-})
+
