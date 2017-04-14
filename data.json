@@ -1,8 +1,16 @@
 {"title":"Watson Virtual Agent",
+ "botID": "5d9ab453-ee8e-4185-8dc6-63641efdc8cc",
+ "XIBMClientID": "79af493b-dce5-4b27-80d9-46ce0ee63c45",
+ "XIBMClientSecret": "Y8qE1sT1vJ8iN2jY5hL3xO4aD1qH3qY8oX2uL1gU1eV5tK4uT8",
  "links" : [
-  { "name": "Bluemix",
-    "link" : "http://www.bluemix.net"},
-  { "name": "Watson Virtual Agent",
-    "link" : "http://www.bluemix.net"}
- ]
+  	{"name": "Bluemix",
+   	 "link" : "http://www.bluemix.net"
+   	},
+    {"name": "Watson Virtual Agent",
+     "link" : "https://www.ibm.com/us-en/marketplace/cognitive-customer-engagement"
+    },
+    {"name": "Watson Conversation",
+     "link" : "https://www.ibm.com/watson/developercloud/conversation.html"
+    }
+  ]
  }
