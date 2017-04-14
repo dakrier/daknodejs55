@@ -48,7 +48,7 @@ app.get('/how', function (req, res) {
 	});
 });
 
-app.get('/index2', function (req, res) {
+app.get('/', function (req, res) {
   //res.send('Hello World!');
 
 	// get your data into a variable
