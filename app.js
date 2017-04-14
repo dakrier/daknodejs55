@@ -55,7 +55,7 @@ app.get('/', function (req, res) {
 	var fooJson = require('./data.json');
 
 	// read the file and use the callback to render
-	fs.readFile('./public/index2.html', function(err, data){
+	fs.readFile('./public/demo.html', function(err, data){
   		if (!err) {
     		// make the buffer into a string
    	 		var source = data.toString();
