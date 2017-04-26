@@ -3,14 +3,25 @@
  "XIBMClientID": "79af493b-dce5-4b27-80d9-46ce0ee63c45",
  "XIBMClientSecret": "Y8qE1sT1vJ8iN2jY5hL3xO4aD1qH3qY8oX2uL1gU1eV5tK4uT8",
  "links" : [
-  	{"name": "Bluemix",
-   	 "link" : "http://www.bluemix.net"
-   	},
+	{"name": "Bluemix",
+	"link" : "http://www.bluemix.net"
+    },
     {"name": "Watson Virtual Agent",
      "link" : "https://www.ibm.com/us-en/marketplace/cognitive-customer-engagement"
     },
     {"name": "Watson Conversation",
      "link" : "https://www.ibm.com/watson/developercloud/conversation.html"
-    }
+    },
+   {"name": "Adding Watson Virtual Agent To Your Web App",
+     "link" : "/wvasetup.html"
+   },
+   {"name": "Chat Bots - customer service must-have",
+     "link" : "https://venturebeat.com/2017/04/18/chatbots-evolve-from-greeting-tool-to-customer-service-must-have/"
+   },
+   {"name": "Chat Bots - Tutorial: Bot Yourslef",
+     "link" : "https://www.ibm.com/blogs/watson/2017/03/bot-yourself/"
+   }
   ]
  }
+ 
+ 
